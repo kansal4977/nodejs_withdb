@@ -1,7 +1,7 @@
 const mongoose=require('mongoose');
 //Define  mongodb url connection
 //const mongoURL= 'mongodb://localhost:27017/mydb';
-const mongoURL= 'mongodb+srv://kansal:param%402005@cluster0.tzuy2.mongodb.net/';
+const mongoURL= process.env.DB_URL;  //'mongodb+srv://kansal:param%402005@cluster0.tzuy2.mongodb.net/';
 //setup monogdb connection
 mongoose.connect(mongoURL);
 //get the default connection
